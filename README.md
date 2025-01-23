@@ -5,7 +5,7 @@
 </div>
 
 ## Capabilities
-- detects whether it runs in SYSTEM-context or user-context (like apps in intune)
+- detects whether it runs in SYSTEM-context or user-context (like apps in Intune)
 - installs itself to autostart on system boot or user login
 - clones a repository and executes all powershell scripts in it based on rules defined by the directory structure
 
