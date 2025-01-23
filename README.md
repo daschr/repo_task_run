@@ -19,10 +19,10 @@
 |`reboot-<enabled\|disabled>`|on `reboot-enabled`: after a script in this folder ran, reboot the machine|`reboot-enabled`|
 |`type-<oneshot\|onboot>`|on `type-oneshot`: only execute the scripts a single time, but re-execute them, if they have changed; on `type-onboot` execute the scripts at every boot|`reboot-oneshot`|
 
-Your deployment repository will then f. e. look like this:
+Your deployment repository will then maybe look like this:
 
 <p align="center"> 
-  <img src="https://github.com/user-attachments/assets/f283897c-eb02-4e27-aaa4-05ff4707f27b" />
+  <img src="https://github.com/user-attachments/assets/014d674e-2929-4824-97c7-24ebd73dca9d" />
 </p>
 
 ## Requirements
