@@ -1,0 +1,23 @@
+[package]
+name = "repo_task_run"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bincode = "1.3.3"
+# git2 = {version = "0.20.0", features = ["ssh"]}
+serde = { version = "1.0.217", features = ["derive"] }
+sha256 = "1.5.0"
+windows-registry = "0.4.0"
+windows = { version = "0.58.0", features = ["Win32_Storage_FileSystem"]}
+gix = { version = "0.69.1", default-features = true, features = ["comfort", "blocking-network-client"]}
+log = "0.4.25"
+tracing-appender = "0.2.3"
+tracing-subscriber = "0.3.19"
+winapi = { version = "0.3.9", features=["shellapi","securitybaseapi", "winbase", "winerror", "fileapi", "errhandlingapi", "wincrypt", "handleapi", "minwindef", "winnt", "processthreadsapi", "debugapi", "sysinfoapi", "winuser", "minwinbase", "synchapi", "windef", "psapi", "winsvc", "wincon"]}
+windows-result = "0.2.0"
+reqwest = { version = "0.12.12", features = ["json", "blocking"]}
+serde_json = "1.0.137"
+
+[profile.release]
+strip = true
