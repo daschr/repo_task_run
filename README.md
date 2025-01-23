@@ -8,6 +8,8 @@
 - detects wheter it runs in SYSTEM-context or user-context (like apps in intune)
 - installs itself to autostart on system boot or user login
 - clones a repository and executes all powershell scripts in it based on rules defined by the directory structure
+
+
 ## Directory rules
 |syntax|description|example|
 |----|-----------|-------|
@@ -17,10 +19,16 @@
 |`reboot-<enabled\|disabled>`|on `reboot-enabled`: after a script in this folder ran, reboot the machine|`reboot-enabled`|
 |`type-<oneshot\|onboot>`|on `type-oneshot`: only execute the scripts a single time, but re-execute them, if they have changed; on `type-onboot` execute the scripts at every boot|`reboot-oneshot`|
 
+Your deployment repository will then f. e. look like this:
+
+<p align="center"> 
+  <img src="https://github.com/user-attachments/assets/f283897c-eb02-4e27-aaa4-05ff4707f27b" />
+</p>
+
 ## Requirements
-- you need Office365 with intune
+- you need Office365 with Intune (or any other subscription where Intune is included)
 - you need to create a azure daemon application:
-  -  see https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app?tabs=certificate
+  -  see https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app
     -  specify "Accounts in this organization directory only"
     -  do not set a redirect URI
     -  register
