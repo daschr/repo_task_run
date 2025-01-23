@@ -65,5 +65,5 @@ Your deployment repository will then f. e. look like this:
   ![image](https://github.com/user-attachments/assets/59c3c00a-ca6a-42e6-bd3c-fa906aa5884e)
 
 ## Debugging
-- the location of the logfiles in system-context is `C:\Programdata\repo_task_run.*`
-- the location of the logfiles in per-user context is `%LOCALAPPDATA%\repo_task_run.*`
+- the location of the logfiles in *system* context is `C:\Programdata\repo_task_run.*`
+- the location of the logfiles in *per-user* context is `%LOCALAPPDATA%\repo_task_run.*`
