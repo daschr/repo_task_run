@@ -27,7 +27,7 @@ Your deployment repository will then f. e. look like this:
 
 ## Requirements
 - you need Office365 with Intune (or any other subscription where Intune is included)
-- you need to create a azure daemon application:
+- you need to create a Azure daemon application:
   -  see https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app
     -  specify "Accounts in this organization directory only"
     -  do not set a redirect URI
