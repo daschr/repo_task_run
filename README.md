@@ -48,7 +48,7 @@ Your deployment repository will then maybe look like this:
 |`REPO_HOST`|the repo host and port to connect to, this is used to wait for until the repository is reachable|`github.com:22`| 
 |`REPO_URL`|the ssh repository url containing the scripts|`git@github.com:yourcompany/company-intune-scripts.git`|
 |`AZURE_TENANT_ID`|the azure tenant id of your organization|`01949404-f2d7-709d-b77f-48e99edbfeea`|
-|`AZURE_CLIENT_ID`|the azure client id of your application (RepoRunTask)|`01949404-f2d7-709d-b77f-5b079acec8f4`|
+|`AZURE_CLIENT_ID`|the azure client id of your application (RepoRunTask)|`oiahjns~~aioiNAS9d70a9dnpsasodipaf0wwi2`|
 |`AZURE_CLIENT_SECRET`|the azure client secret|`01949404-f2d7-709d-b77f-5d6c897d04c4`|
 
 2. you need to create a new ssh key, f. e.  using `ssh-keygen -b 4096 -f ssh_key`, and store the private key to `ssh-key`, it gets imported at build-time
