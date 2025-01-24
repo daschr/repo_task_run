@@ -13,11 +13,11 @@
 ## Directory rules
 |syntax|description|example|
 |----|-----------|-------|
-|`group-<groupname>`|executes all scripts in the folder only if the user in in the azure group <groupname>|`group-sales`|
+|`group-<groupname>`|executes all scripts in the folder only if the user is a member of the azure group <groupname>|`group-sales`|
 |`depends-<script name without extension>`|executes all scripts in the folder not before the script name `<script name without extension>` has run|`depends-install-openvpn`|
-|`context-<system\|user>`|executes all scripts in the folder only if the RepoTaskRun run in either system or user context|`context-system` or `context-user`|
+|`context-<system\|user>`|executes all scripts in the folder only if RepoTaskRun is executed either system or user context|`context-system` or `context-user`|
 |`reboot-<enabled\|disabled>`|on `reboot-enabled`: after a script in this folder ran, reboot the machine|`reboot-enabled`|
-|`type-<oneshot\|onboot>`|on `type-oneshot`: only execute the scripts a single time, but re-execute them, if they have changed; on `type-onboot` execute the scripts at every boot|`reboot-oneshot`|
+|`type-<oneshot\|onboot>`|on `type-oneshot`: only execute the scripts a single time, but re-execute them if they have changed; on `type-onboot` execute the scripts at every boot|`reboot-oneshot`|
 
 Your deployment repository will then maybe look like this:
 
