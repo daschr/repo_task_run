@@ -1,6 +1,6 @@
 use crate::{
-    azure_groups::get_azure_groups_of_user,
     common::{get_system_repository_path, get_user_repository_path, is_host_reachable, REPO_HOST},
+    entra_groups::get_entra_groups_of_user,
     gix_repository::update_repo,
     task::{ExecutionContext, Task, TaskType, Tasks},
 };
@@ -92,7 +92,7 @@ impl TaskFetcher {
         upn: Option<String>,
     ) -> Option<Tasks> {
         let user_group_membership: Option<HashSet<String>> = match &upn {
-            Some(u) => get_azure_groups_of_user(u).ok(),
+            Some(u) => get_entra_groups_of_user(u).ok(),
             None => None,
         };
 

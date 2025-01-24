@@ -7,8 +7,8 @@ use task::ExecutionContext;
 use task_runner::TaskRunner;
 use tracing_appender::rolling::{RollingFileAppender, Rotation};
 
-mod azure_groups;
 mod common;
+mod entra_groups;
 mod gix_repository;
 mod installation;
 mod task;

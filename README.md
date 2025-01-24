@@ -13,7 +13,7 @@
 ## Directory rules
 |syntax|description|example|
 |----|-----------|-------|
-|`group-<groupname>`|executes all scripts in the folder only if the user is a member of the azure group <groupname>|`group-sales`|
+|`group-<groupname>`|executes all scripts in the folder only if the user is a member of the Entra group <groupname>|`group-sales`|
 |`depends-<script name without extension>`|executes all scripts in the folder not before the script name `<script name without extension>` has run|`depends-install-openvpn`|
 |`context-<system\|user>`|executes all scripts in the folder only if RepoTaskRun is executed either system or user context|`context-system` or `context-user`|
 |`reboot-<enabled\|disabled>`|on `reboot-enabled`: after a script in this folder ran, reboot the machine|`reboot-enabled`|
@@ -27,7 +27,7 @@ Your deployment repository will then maybe look like this:
 
 ## Requirements
 - you need Office365 with Intune (or any other subscription where Intune is included)
-- you need to create a Azure daemon application:
+- you need to create a Entra daemon application:
   -  see https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app
     -  specify "Accounts in this organization directory only"
     -  do not set a redirect URI
@@ -47,9 +47,9 @@ Your deployment repository will then maybe look like this:
 |----|-----------|-------|
 |`REPO_HOST`|the repo host and port to connect to, this is used to wait for until the repository is reachable|`github.com:22`| 
 |`REPO_URL`|the ssh repository url containing the scripts|`git@github.com:yourcompany/company-intune-scripts.git`|
-|`AZURE_TENANT_ID`|the azure tenant id of your organization|`01949404-f2d7-709d-b77f-48e99edbfeea`|
-|`AZURE_CLIENT_ID`|the azure client id of your application (RepoRunTask)|`01949404-f2d7-709d-b77f-5d6c897d04c4`|
-|`AZURE_CLIENT_SECRET`|the azure client secret|`oiahjns~~aioiNAS9d70a9dnpsasodipaf0wwi2`|
+|`ENTRA_TENANT_ID`|the Entra tenant id of your organization|`01949404-f2d7-709d-b77f-48e99edbfeea`|
+|`ENTRA_CLIENT_ID`|the Entra client id of your application (RepoRunTask)|`01949404-f2d7-709d-b77f-5d6c897d04c4`|
+|`ENTRA_CLIENT_SECRET`|the Entra client secret|`oiahjns~~aioiNAS9d70a9dnpsasodipaf0wwi2`|
 
 2. you need to create a new ssh key, f. e.  using `ssh-keygen -b 4096 -f ssh_key`, and store the private key to `ssh-key`, it gets imported at build-time
 3. run `cargo b --release`

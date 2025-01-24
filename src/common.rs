@@ -12,9 +12,9 @@ pub const REPO_HOST: &str = env!("REPO_HOST");
 pub const REPO_URL: &str = env!("REPO_URL");
 pub const SSH_KEY: &str = include_str!("../ssh_key");
 
-pub const AZURE_TENANT_ID: &str = env!("AZURE_TENANT_ID");
-pub const AZURE_CLIENT_ID: &str = env!("AZURE_CLIENT_ID");
-pub const AZURE_CLIENT_SECRET: &str = env!("AZURE_CLIENT_SECRET");
+pub const ENTRA_TENANT_ID: &str = env!("ENTRA_TENANT_ID");
+pub const ENTRA_CLIENT_ID: &str = env!("ENTRA_CLIENT_ID");
+pub const ENTRA_CLIENT_SECRET: &str = env!("ENTRA_CLIENT_SECRET");
 
 #[allow(unused)]
 pub fn get_upn() -> Option<String> {
